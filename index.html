@@ -20,9 +20,11 @@ function myfunction() {
   在事件处理函数中
   获取aqi-input输入的值，并显示在aqi-display中
   */
-  x = document.getElementById("aqi-display");
-  y = document.getElementById("aqi-input");
-  x.innerHTML=y.value;
+  var x = document.getElementById("aqi-display");
+  var y = document.getElementById("aqi-input");
+  if(y.value)
+     x.innerHTML=y.value;
+  else x.innerHTML=("请输入北京今天空气质量");
 }
 
 </script>
